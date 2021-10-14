@@ -12,3 +12,15 @@ fun String?.toSafeInt(default: Int = 0): Int {
         default
     }
 }
+
+fun String?.toSafeFloat(default: Float = 0F): Float {
+    if (this.isNullOrBlank()) {
+        return default
+    }
+
+    return try {
+        this.trim().toFloat()
+    } catch (e: NumberFormatException) {
+        default
+    }
+}
