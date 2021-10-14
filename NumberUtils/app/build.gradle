@@ -46,5 +46,4 @@ dependencies {
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.8.1'
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.yoonhok524'
