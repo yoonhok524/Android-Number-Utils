@@ -2,7 +2,7 @@ package com.aaron.utils.number
 
 import java.text.DecimalFormat
 
-private val decimalFormat: DecimalFormat by lazy { DecimalFormat() }
+internal val decimalFormat: DecimalFormat by lazy { DecimalFormat() }
 
 fun String?.toSafeInt(default: Int = 0): Int {
     if (this.isNullOrBlank()) {
@@ -29,14 +29,6 @@ fun String?.toSafeFloat(default: Float = 0F): Float {
 }
 
 fun Int?.toDollarText(prefix: String = "$", default: String = "-"): String {
-    return if (this == null) {
-        default
-    } else {
-        "${prefix}${decimalFormat.format(this)}"
-    }
-}
-
-fun Float?.toDollarText(prefix: String = "$", default: String = "-"): String {
     return if (this == null) {
         default
     } else {
