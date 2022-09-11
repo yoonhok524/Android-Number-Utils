@@ -27,11 +27,3 @@ fun String?.toSafeFloat(default: Float = 0F): Float {
         default
     }
 }
-
-fun Int?.toDollarText(prefix: String = "$", default: String = "-"): String {
-    return if (this == null) {
-        default
-    } else {
-        "${prefix}${decimalFormat.format(this)}"
-    }
-}
